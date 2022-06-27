@@ -1,37 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
+<?php 
+  require 'includes/funciones.php';
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="data:,">
-  <title>Bienes Raices</title>
-  <link rel="stylesheet" href="build/css/app.css">
-</head>
-<header class="header">
-  <div class="contenedor contenido-header">
-    <div class="barra">
-      <a href="index.html">
-        <img src="build/img/logo.svg" alt="Logotipo Bienes raices">
-      </a>
-      <div class="mobile-menu">
-        <img src="build/img/barras.svg" alt="Menu de barras">
-      </div>
+  incluirTemplate('header');
 
-      <div class="derecha">
-        <img src="build/img/dark-mode.svg" alt="Icono modo ohjcuro" class="dark-mode-boton">
-        <nav class="navegacion">
-          <a href="nosotros.html">Nosotros</a>
-          <a href="anuncios.html">Anuncios</a>
-          <a href="blog.html"><i>Blog</i></a>
-          <a href="contacto.html">Contacto</a>
-        </nav>
-      </div>
-    </div>
-    <!--barra-->
-  </div>
-</header>
+?>
+
+<body>
 <main class="contenedor seccion contenido-centrado">
   <h1>Casa en Venta frente al Bosque</h1>
   <picture>
@@ -99,19 +73,4 @@
   </div>
 </main>
 
-<body>
-  <footer class="footer seccion">
-    <div class="contenedor contenedor-footer">
-      <nav class="navegacion">
-        <a href="nosotros.html">Nosotros</a>
-        <a href="anuncios.html">Anuncios</a>
-        <a href="blog.html"><i>Blog</i></a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
-    </div>
-    <p class="copyright">Todos los derechos Reservados 2022 &copy;</p>
-  </footer>
-  <script src="build/js/bundle.min.js"></script>
-</body>
-
-</html>
+  <?php incluirTemplate('footer'); ?>
