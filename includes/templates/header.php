@@ -1,3 +1,12 @@
+<?php 
+  if(!isset($_SESSION)){
+    session_start();
+  }
+  
+  $auth = $_SESSION['login'] ?? false;
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -9,7 +18,7 @@
   <title>Bienes Raices</title>
   <link rel="stylesheet" href="/Programacion_web/Udemy/bienesraices_inicio/build/css/app.css">
 </head>
-<header class="header <?php echo $inicio ?  ' inicio' :  ''; ?>"
+<header class="header <?php echo $inicio ?  ' inicio' :  ''; ?>">
   <div class="contenedor contenido-header">
     <div class="barra">
       <a href="/Programacion_web/Udemy/bienesraices_inicio/index.php">
@@ -26,9 +35,20 @@
           <a href="/Programacion_web/Udemy/bienesraices_inicio/anuncios.php">Anuncios</a>
           <a href="/Programacion_web/Udemy/bienesraices_inicio/blog.php"><i>Blog</i></a>
           <a href="/Programacion_web/Udemy/bienesraices_inicio/contacto.php">Contacto</a>
+          <?php if($auth): ?>
+
+            <a href="/Programacion_web/Udemy/bienesraices_inicio/cerrar_sesion.php">Cerrar Sesion</a>
+
+          <?php endif; ?>
+
         </nav>
       </div>
     </div>
     <!--barra-->
+    <?php
+      if($inicio){
+        echo "<h1>Venta de Casas y Departamentos Mamalones</h1>";
+      }
+    ?>
   </div>
 </header>

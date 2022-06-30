@@ -1,4 +1,12 @@
 <?php  
+  require '../../includes/funciones.php';
+  $auth = estaAutenticado();
+
+    if(!$auth){
+      header("Location: /Programacion_web/Udemy/bienesraices_inicio");
+
+    }
+
 
   //Validar URL
   $id = $_GET['id'];
@@ -11,7 +19,6 @@
   require '../../includes/config/database.php';
   $db = conectarDB();
 
-  require '../../includes/funciones.php';
   incluirTemplate('header');
 
   $consulta = "SELECT * FROM propiedades WHERE id=${id}";

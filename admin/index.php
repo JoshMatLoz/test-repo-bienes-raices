@@ -1,4 +1,15 @@
 <?php
+  require '../includes/funciones.php';
+  $auth = estaAutenticado();
+
+    if(!$auth){
+      header("Location: /Programacion_web/Udemy/bienesraices_inicio");
+
+    }
+  // echo '<pre>';
+  // var_dump($auth);
+  // echo '</pre>';
+
 
   //importar conexion
   require '../includes/config/database.php';
@@ -36,14 +47,14 @@
 
       if($resultado){
         
-        header("location: ./?resultado=3");
+        header("Location: ./?resultado=3");
       }
 
     }
   }
 
   //Incluye template
-  require '../includes/funciones.php';
+  // require '../includes/funciones.php';
   incluirTemplate('header');
 ?>
 
@@ -69,13 +80,13 @@
       <th>PRECIO</th>
       <th>ACCIONES</th>
     </thead>
-    <tbody class="dark-mode"><!--Mostrar los resultados-->
+    <tbody ><!--Mostrar los resultados-->
       <?php while($propiedad = mysqli_fetch_assoc($resultadoConsulta)):?>
       
       <tr>  
         <td><?php echo $propiedad['id'];?></td>
         <td><?php echo $propiedad['titulo'];?></td>
-        <td><img class="imagen-tabla" src="../imagenes/<?php echo $propiedad['imagen'];?>" alt="Imagen Casa"></td>
+        <td><img class="imagen-tabla" src="./imagenes/<?php echo $propiedad['imagen'];?>" alt="Imagen Casa"></td>
         <td>$<?php echo $propiedad['precio'];?></td>
         <td>
           

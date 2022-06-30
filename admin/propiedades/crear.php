@@ -3,7 +3,12 @@
   $db = conectarDB();
 
   require '../../includes/funciones.php';
-  incluirTemplate('header');
+  $auth = estaAutenticado();
+
+    if(!$auth){
+      header("Location: /Programacion_web/Udemy/bienesraices_inicio");
+
+    }
 
   $consulta = "SELECT * FROM vendedores";
   $resultado = mysqli_query($db, $consulta);
@@ -99,6 +104,7 @@
       }
     }
   }
+  incluirTemplate('header');
 ?>
 
 <main class="contenedor seccion">
