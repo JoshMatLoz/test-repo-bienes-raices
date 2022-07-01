@@ -16,28 +16,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="data:,">
   <title>Bienes Raices</title>
-  <link rel="stylesheet" href="/Programacion_web/Udemy/bienesraices_inicio/build/css/app.css">
+  <link rel="stylesheet" href=<?php  __DIR__; ?>"/build/css/app.css">
 </head>
 <header class="header <?php echo $inicio ?  ' inicio' :  ''; ?>">
   <div class="contenedor contenido-header">
     <div class="barra">
-      <a href="/Programacion_web/Udemy/bienesraices_inicio/index.php">
-        <img src="/Programacion_web/Udemy/bienesraices_inicio/build/img/logo.svg" alt="Logotipo Bienes raices">
+      <a href="index.php">
+        <img src="<?php  __DIR__; ?>/build/img/logo.svg" alt="Logotipo Bienes raices">
       </a>
       <div class="mobile-menu">
-        <img src="/Programacion_web/Udemy/bienesraices_inicio/build/img/barras.svg" alt="Menu de barras">
+        <img src="<?php  __DIR__; ?>/build/img/barras.svg" alt="Menu de barras">
       </div>
 
       <div class="derecha">
-        <img src="/Programacion_web/Udemy/bienesraices_inicio/build/img/dark-mode.svg" alt="Icono modo ohjcuro" class="dark-mode-boton">
+        <img src="<?php  __DIR__; ?>/build/img/dark-mode.svg" alt="Icono modo ohjcuro" class="dark-mode-boton">
         <nav class="navegacion">
-          <a href="/Programacion_web/Udemy/bienesraices_inicio/nosotros.php">Nosotros</a>
-          <a href="/Programacion_web/Udemy/bienesraices_inicio/anuncios.php">Anuncios</a>
-          <a href="/Programacion_web/Udemy/bienesraices_inicio/blog.php"><i>Blog</i></a>
-          <a href="/Programacion_web/Udemy/bienesraices_inicio/contacto.php">Contacto</a>
+          <a href="nosotros.php">Nosotros</a>
+          <a href="anuncios.php">Anuncios</a>
+          <a href="blog.php"><i>Blog</i></a>
+          <a href="contacto.php">Contacto</a>
           <?php if($auth): ?>
 
-            <a href="/Programacion_web/Udemy/bienesraices_inicio/cerrar_sesion.php">Cerrar Sesion</a>
+            <a href="cerrar_sesion.php">Cerrar Sesion</a>
 
           <?php endif; ?>
 

@@ -70,7 +70,7 @@
       <p class="alerta exito">Anuncio Eliminado Bacanamente</p>
   <?php endif; ?>
   
-  <a href="/Programacion_web/Udemy/bienesraices_inicio/admin/propiedades/crear.php" class="boton boton-verde">Nueva Propiedad</a>
+  <a href="/admin/propiedades/crear.php" class="boton boton-verde">Nueva Propiedad</a>
 
   <table class="propiedades">
     <thead>
@@ -95,7 +95,7 @@
           <input type="submit" value="Eliminar" class="boton-rojo-block">
         </form>
         
-          <a class="boton-amarillo-block" href="./propiedades/actualizar.php?id=<?php echo $propiedad['id']; ?>">Modificar</a>
+          <a class="boton-amarillo-block" href="admin/propiedades/actualizar.php?id=<?php echo $propiedad['id']; ?>">Modificar</a>
         </td>
       </tr>
       <?php endwhile; ?>
