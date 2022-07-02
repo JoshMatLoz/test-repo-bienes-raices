@@ -132,7 +132,7 @@
 
 <main class="contenedor seccion">
   <h1>Modificar Anuncio</h1>
-    <a href="/admin/" class="boton boton-verde">Regresar</a>
+    <a href="admin/" class="boton boton-verde">Regresar</a>
 
     <?php foreach($errores as $error):?>
       
